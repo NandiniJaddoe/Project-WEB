@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Trein verhalen</title>
+		<link rel="stylesheet/less" type="text/css" href="./styles/style.less" />
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<header>
+			<a href="./index.html"><H1>Trein verhalen</H1></a>
+			<a href="#" class="form-link">Mijn verhalen</a>
+			<!-- Een deel van de code van http://codepen.io/codemonkeyco/pen/grGobZ -->
+			<div class="form" id="ms-form">
+				<div class="ms-content">
+					<div class="col-xs-12">
+						<h2><i class="fa fa-pencil"></i> INLOGGEN</h2>
+						<div class="ms-field">
+							<input type="text" class="field" />
+							<label class="placeholder">Gebruikersnaam</label>
+							<div class="ms-line"><i class="fa fa-check"></i></div>
+						</div>
+						<div class="ms-field">
+							<input type="password" class="field" />
+							<label class="placeholder">Wachtwoord</label>
+							<div class="ms-line"><i class="fa fa-check"></i></div>
+						</div>
+						<button type="button" class="ms-form-btn" onclick="signIn(); return true">LOGIN</button>
+						<p>Heeft u geen account? <a onclick="registerForm(); return true">Registreer</a></p>
+					</div>
+				</div>
+				<div class="ms-register reg">
+					<div class="col-xs-12">
+						<h2><i class="fa fa-pencil"></i> Registreer</h2>
+						<div class="ms-field">
+							<input type="text" class="field" />
+							<label class="placeholder">Gebruikersnaam</label>
+							<div class="ms-line"><i class="fa fa-check"></i></div>
+						</div>
+						<div class="ms-field">
+							<input type="password" class="field password" />
+							<label class="placeholder">Wachtwoord</label>
+							<div class="ms-line"><i class="fa fa-check"></i></div>
+						</div>
+						<div class="ms-field">
+							<input type="password" class="field cpassword" />
+							<label class="placeholder">Herhaal wachtwoord</label>
+							<div class="ms-line"><i class="fa fa-check"></i></div>
+						</div>
+						<button type="button" class="ms-form-btn" onclick="registerIn(); return false">REGISTREER</button>
+						<p>Heeft u a een account? <a onclick="signINForm(); return false">Sign In</a></p>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="header-img">
+			<div class="links">
+				<a>Lezen doe je in de trein</a>
+				<a>Aanbevolen</a>
+				<a>Nieuw</a>
+			</div>
+			<img class="active" src="./images/trein.jpg" alt="Lekker lezen doe je in de trein">
+			<img src="./images/station.jpg" alt="Lekker lezen doe je in de trein">
+			<img src="./images/amsterdam.png" alt="Lekker lezen doe je in de trein">
+		</div>
+		<div class="container">
+			<div class="search">
+				<form>
+					<fieldset>
+						<legend>
+							<label> <input type="text" placeholder="Zoeken..."></label>
+						</legend>
+					</fieldset>
+				</form>
+				<div class="btn-group">
+					<a id="filter-button" class="collapsed" role="button" data-toggle="collapse" data-parent="search-block" href="#collapseFilter" aria-expanded="false" aria-controls="collapseFilter">
+						<span class="icon-filter"></span>Filter
+					</a>
+					<a id="sorteer-button" class="collapsed" role="button" data-toggle="collapse" data-parent="search-block" href="#collapseSorteer" aria-expanded="false" aria-controls="collapseSorteer">
+						<span class="icon-filter"></span>Sorteer
+					</a>
+				</div>
+				<!--filteren-->
+				<div class="collapse filter">
+					<form class="form">
+						<div class="form-inline">
+							<legend>Leestijd
+								<div class="form-group">
+									<input type="checkbox" id="Option-One" />
+									<label class="green checkbox" for="Option-One">0 - 5 min</label>
+								</div>
+								<div class="form-group">
+									<input type="checkbox" id="Option-Two" />
+									<label class="green checkbox" for="Option-Two">5 - 10 min</label>
+								</div>
+								<div class="form-group">
+									<input type="checkbox" id="Option-Four" />
+									<label class="green checkbox" for="Option-Four">10 - 20 min</label>
+								</div>
+								<div class="form-group spacer"></div>
+								<div class="form-group">
+									<input type="checkbox" id="Option-Five" />
+									<label class="green checkbox" for="Option-Five">20+ min</label>
+								</div>
+								<legend>Genre
+									<div class="form-group">
+										<input type="checkbox" id="Option-One" />
+										<label class="green checkbox" for="Option-One">Avontuur</label>
+									</div>
+									<div class="form-group">
+										<input type="checkbox" id="Option-Two" />
+										<label class="green checkbox" for="Option-Two">Drama</label>
+									</div>
+									<div class="form-group">
+										<input type="checkbox" id="Option-Four" />
+										<label class="green checkbox" for="Option-Four">Horror</label>
+									</div>
+									<div class="form-group spacer"></div>
+									<div class="form-group">
+										<input type="checkbox" id="Option-Five" />
+										<label class="green checkbox" for="Option-Five">Liefde</label>
+									</div>
+								</legend>
+								<legend>Schrijfer
+									<div class="form-group">
+										<input type="checkbox" id="Option-One" />
+										<label class="green checkbox" for="Option-One">K. Hart</label>
+									</div>
+									<div class="form-group">
+										<input type="checkbox" id="Option-Two" />
+										<label class="green checkbox" for="Option-Two">A. Holleeder</label>
+									</div>
+									<div class="form-group">
+										<input type="checkbox" id="Option-Four" />
+										<label class="green checkbox" for="Option-Four">T. Geurts</label>
+									</div>
+									<div class="form-group spacer"></div>
+									<div class="form-group">
+										<input type="checkbox" id="Option-Five" />
+										<label class="green checkbox" for="Option-Five">Molovich</label>
+									</div>
+								</legend>
+								<legend>Taal
+									<div class="form-group">
+										<input type="checkbox" id="Option-One" />
+										<label class="green checkbox" for="Option-One">Nederlands</label>
+									</div>
+									<div class="form-group">
+										<input type="checkbox" id="Option-Two" />
+										<label class="green checkbox" for="Option-Two">Engels</label>
+									</div>
+									<div class="form-group">
+										<input type="checkbox" id="Option-Four" />
+										<label class="green checkbox" for="Option-Four">Frans</label>
+									</div>
+									<div class="form-group spacer"></div>
+									<div class="form-group">
+										<input type="checkbox" id="Option-Five" />
+										<label class="green checkbox" for="Option-Five">Duits</label>
+									</div>
+								</legend>
+							</div>
+						</form>
+					</div>
+					<!--sorteren-->
+					<div class="collapse sorteer">
+						<form class="form">
+							<div class="form-inline">
+								<legend>Sorteren op
+									<div class="form-group">
+										<input type="checkbox" id="Option-One" />
+										<label class="green checkbox" for="Option-One">Datum</label>
+									</div>
+									<div class="form-group">
+										<input type="checkbox" id="Option-Two" />
+										<label class="green checkbox" for="Option-Two">Alfabet</label>
+									</div>
+									<div class="form-group">
+										<input type="checkbox" id="Option-Four" />
+										<label class="green checkbox" for="Option-Four">Meest Gelezen</label>
+									</div>
+									<div class="form-group spacer"></div>
+									<div class="form-group">
+										<input type="checkbox" id="Option-Five" />
+										<label class="green checkbox" for="Option-Five">Hoogste waardering</label>
+									</div>
+								</legend>
+							</div>
+						</form>
+					</div>
+				</div>
+				
+				<section>
+					<article class="block">
+						<img src="./images/woorden.jpg" alt="Woordenrally">
+						<div class="overlay">
+							<H2>Woordenrally</H2>
+							<p>Ik stap bus 21 uit. Mijn zoon slaapt in zijn wagentje, de paarse crayon die hij van thuis heeft meegenomen, stevig in zijn knuistje...</p>
+							<a href="woordenrally.html"><span class="arrow"></span>Lees meer</a>
+						</div>
+					</article>
+					<article class="block">
+						<img src="./images/amsterdam.png" alt="Toerischtische route">
+						<div class="overlay">
+							<H2>Toerischtische route</H2>
+							<p>Als u naar links kijkt, ziet u het Centraal Station. Gebouwd tussen 1881 en 1889 door architect P.H.J...</p>
+							<a href="route.html"><span class="arrow"></span>Lees meer</a>
+						</div>
+					</article>
+					<article class="block">
+						<img src="./images/frustratie.jpg" alt="Gefrustreerd">
+						<div class="overlay">
+							<h2>Gefrustreerd</h2>
+							<p>Ik stap uit die godverdomde stinkbus. De mensen krioelen als mieren over het stationsplein. Ik wil ze vertrappen onder...</p>
+							<a href="gefrustreerd.html"><span class="arrow"></span>Lees meer</a>
+						</div>
+					</article>
+					<article class="block">
+						<img src="./images/woorden.jpg" alt="Woordenrally">
+						<div class="overlay">
+							<H2>Woordenrally</H2>
+							<p>Ik stap bus 21 uit. Mijn zoon slaapt in zijn wagentje, de paarse crayon die hij van thuis heeft meegenomen, stevig in zijn knuistje...</p>
+							<a href="woordenrally.html"><span class="arrow"></span>Lees meer</a>
+						</div>
+					</article>
+					<article class="block">
+						<img src="./images/amsterdam.png" alt="Toerischtische route">
+						<div class="overlay">
+							<H2>Toerischtische route</H2>
+							<p>Als u naar links kijkt, ziet u het Centraal Station. Gebouwd tussen 1881 en 1889 door architect P.H.J...</p>
+							<a href="route.html"><span class="arrow"></span>Lees meer</a>
+						</div>
+					</article>
+					<article class="block">
+						<img src="./images/frustratie.jpg" alt="Gefrustreerd">
+						<div class="overlay">
+							<h2>Gefrustreerd</h2>
+							<p>Ik stap uit die godverdomde stinkbus. De mensen krioelen als mieren over het stationsplein. Ik wil ze vertrappen onder...</p>
+							<a href="gefrustreerd.html"><span class="arrow"></span>Lees meer</a>
+						</div>
+					</article>
+				</section>
+				<script src="./js/filterSorteer.js" type="text/javascript"></script>
+				<script src="./js/login.js" type="text/javascript"></script>
+				<script src="./js/front.js" type="text/javascript"></script>
+				<script src="./js/assets/less.js" type="text/javascript"></script>
+			</div>
+		<footer><p>Nandini Jaddoe&copy; 2017</p></footer>
+	</body>
+</html>

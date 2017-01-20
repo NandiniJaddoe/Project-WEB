@@ -1,0 +1,31 @@
+.content-page {
+    section {
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin: 10% 4%;
+        padding: 1em;
+        width: auto;
+        flex-direction:column;
+        h1{
+            color: #009B8F;
+            text-align: center;
+            font-weight: 300;
+        }
+        h2{
+            color: @marine-blauw;
+            text-align: left;
+        }
+        p{
+            line-height: 1.618em;
+            min-width: 20em;
+            max-width: 40em;
+        }
+    }
+
+    /* large screen*/
+    @media all and (min-width: 60em){
+        section{
+            margin: 2% 15%;
+        }
+    }
+}

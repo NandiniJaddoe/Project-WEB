@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Trein verhalen</title>
+		<link rel="stylesheet/less" type="text/css" href="./styles/style.less" />
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="crossorigin="anonymous"></script>
+	</head>
+	<body class="content-page">
+		<header>
+			<a href="./index.html"><H1>Trein verhalen</H1></a>
+			<a href="#" class="form-link">Mijn verhalen</a>
+			<!-- Een deel van de code van http://codepen.io/codemonkeyco/pen/grGobZ -->
+			<div class="form" id="ms-form">
+				<div class="ms-content">
+					<div class="col-xs-12">
+						<h2><i class="fa fa-pencil"></i> INLOGGEN</h2>
+						<div class="ms-field">
+							<input type="text" class="field" />
+							<label class="placeholder">Gebruikersnaam</label>
+							<div class="ms-line"><i class="fa fa-check"></i></div>
+						</div>
+						<div class="ms-field">
+							<input type="password" class="field" />
+							<label class="placeholder">Wachtwoord</label>
+							<div class="ms-line"><i class="fa fa-check"></i></div>
+						</div>
+						<button type="button" class="ms-form-btn" onclick="signIn(); return true">LOGIN</button>
+						<p>Heeft u geen account? <a onclick="registerForm(); return true">Registreer</a></p>
+					</div>
+				</div>
+				<div class="ms-register reg">
+					<div class="col-xs-12">
+						<h2><i class="fa fa-pencil"></i> Registreer</h2>
+						<div class="ms-field">
+							<input type="text" class="field" />
+							<label class="placeholder">Gebruikersnaam</label>
+							<div class="ms-line"><i class="fa fa-check"></i></div>
+						</div>
+						<div class="ms-field">
+							<input type="password" class="field password" />
+							<label class="placeholder">Wachtwoord</label>
+							<div class="ms-line"><i class="fa fa-check"></i></div>
+						</div>
+						<div class="ms-field">
+							<input type="password" class="field cpassword" />
+							<label class="placeholder">Herhaal wachtwoord</label>
+							<div class="ms-line"><i class="fa fa-check"></i></div>
+						</div>
+						<button type="button" class="ms-form-btn" onclick="registerIn(); return false">REGISTREER</button>
+						<p>Heeft u a een account? <a onclick="signINForm(); return false">Sign In</a></p>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section>
+			<!-- Een deel van de code van http://jsfiddle.net/ParthAkbari/pnhLyjb6/3/ -->
+			<div class="team">
+				<h2>Toeristische route</h2>
+				<p>Geschreven door Molovich op 7 juni 2011</p>
+				<div class="toggle" style="display:inline-block;">
+					<a href="#"><img src="./images/1.svg"/></a>
+				</div>
+				<div class="content">
+					<p>Als u naar links kijkt, ziet u het Centraal Station. Gebouwd tussen 1881 en 1889 door architect P.H.J. Cuypers of P.J.H. Cuypers, daar wil ik graag van af wezen. Volgens Cuypers moest een station een ‘doorgangsroute zijn waar vermoeide reiziger even tot rust konden komen’. Dit is het einde van de busrit, hierna gaan we wandelend verder. Let u bij het uitstappen op het afstapje? En vergeet u uw slapende zonen en dochters niet?
+					</div>
+					<div class="toggle" style="display:inline-block;">
+						<a href="#"><img  src="./images/2.svg"/></a>
+					</div>
+					<div class="content">
+						<p>Het stationsplein waarop wij thans lopen, is in 1978 vervaardigd door de legendarische stoeptegellegger Kensel de Vlieger. Het is jammer dat het momenteel zo regent en waait, want droog zijn de subtiele Mondrianeske motieven op de tegels veel beter waarneembaar. Deze wandeltocht zal uiteindelijk moeten leiden tot de Openbare Bibliotheek Amsterdam, ook wel bekend als de OBA, waar wij het boek Stijloefeningen van de Normandische schrijver Raymond Queneau hopen te treffen.</p>
+					</div>
+					<div class="toggle" style="display:inline-block;">
+						<a href="#"><img src="./images/3.svg"/></a>
+					</div>
+					<div class="content">
+						<p>Wij vervolgen onze tocht over een plank. Aan weerszijden treft u diepe bouwputten waar men aan het bouwen is aan het Amsterdam van de toekomst. Luistert u vooral goed naar het imposante gebeuk van de heipalen, subtiel begeleid door het constante gedril van de drilboren.</p>
+					</div>
+					<div class="toggle" style="display:inline-block;">
+						<a href="#"><img src="./images/4.svg"/></a>
+					</div>
+					<div class="content">
+						<p>Het Oosterdokseiland waarop wij ons momenteel bevinden, is in 1832 aangelegd om een deel van het IJ af te scheiden, zodat de verbinding met de Zuiderzee verbroken werd en men aan deze kant geen last meer van eb en vloed zou hebben. Tot 2005 was hier het hoofdpostkantoor van Amsterdam gehuisvest. Inmiddels is dat verhuisd naar de Raadhuisstraat. Als u achter u kijkt, ziet u een achteruit rijdende auto van het merk Renault, met daar achteraan hollend een Franse vrouw met pikzwart, krullend haar.</p>
+					</div>
+					<div class="toggle" style="display:inline-block;">
+						<a href="#"><img src="./images/5.svg"/></a>
+					</div>
+					<div class="content">
+						<p>De Openbare Bibliotheek Amsterdam is geopend op 7 juli 2007. Op 070707 dus. Ontworpen door de architect Joe Coenen. De OBA heeft een vloeroppervlakte van 28.500 vierkante meter en herbergt 1.7 miljoen boeken. Een van die boeken is wellicht Stijloefeningen van Raymond Queneau. Wij staan momenteel op de tweede verdieping bij de kast met schrijvers wier achternaam begint met de letter Q. Er zijn, zoals u ziet, aardig wat boeken van Queneau aanwezig, maar net Stijloefeningen niet. Wij vervolgen onze zoektocht op een computer, een vierde generatie iMac, vervaardigd door de firma Macintosh. Als wij Stijloefeningen intikken in het zoekvenster van het online archief, zien wij dat Stijloefeningen wel degelijk aanwezig is. Om onze zoektocht extra sjeu te geven, leggen wij ons probleem voor aan een authentieke medewerker. Deze medewerker staat geheel en al tot onze dienst en komt zelfs persoonlijk met ons meekijken. De gemiddelde medewerker van de Openbare Bibliotheek ziet dagelijks 2864 boeken door zijn of haar handen passeren. Of Stijloefeningen daar onlangs heeft bij gezeten, blijft vooralsnog onduidelijk. Want ook de medewerker kan het boek niet vinden. Als laatste strohalm reikt hij ons de unieke kans aan om ons probleem voor te leggen aan het magazijn, een even mysterieuze als geheimzinnige orgaan waar dag en nacht 77 vrouwelijke maagden werken die hermetisch worden afgeschermd van de buitenwereld. Deze magazijners, zoals de vrouwen worden genoemd, kun je uitsluitend per mail contacteren. Maar áls Stijloefeningen aanwezig is, dan weten zijn het. Via een mail stellen wij de vraag, waarop wij vijftien minuten dienen te wachten. Een tijdsspanne waarin u iets voor uzelf kunt doen. Zo kunt u boven genieten van een fantastisch panorama over onze geliefde hoofdstad. En natuurlijk van een zalig kopje koffie met bijvoorbeeld de befaamde appeltaart met in rum gewelde krenten! Opdat u weet dat ook de innerlijke mens niet wordt vergeten. Of breng een bezoekje aan het kleine, maar knusse Gerard Reve-museum!</p>
+					</div>
+					<div class="toggle" style="display:inline-block;">
+						<a href="#"><img src="./images/fin.svg"/></a>
+					</div>
+					<div class="content">
+						<p>(15 minuutjes gaan voorbij)<p>
+							
+						</p>Goed. Ik zie dat u allen weer terug bent. Helaas heb ik een droevige mededeling. Volgens de magazijners is Stijloefeningen wel degelijk aanwezig. En wel op de tweede verdieping, waar wij al de ganse middag hebben lopen zoeken. We mogen met een gerust hart concluderen dat Stijloefeningen kwijt is. Als u achter u kijkt, ziet u de geniepige tronie van de ironie. Wij hopen dat u, ondanks dit tegenvallende einde, hebt genoten van de rondleiding. Zo straks gaan wij terug naar het hotel. Daar krijgt u, voordat we aan tafel gaan, nog de gelegenheid om uitgebreid te shoppen. Zo weet ik dat er op het Bos en Lommerplein een uitstekende babywinkel is waar ze schattige babyschoentjes verkopen.</p>
+					</div>
+				</div>
+			</section>
+			<div class="reactie">
+				<form>
+					<fieldset>
+						<legend> Geef uw mening
+							<label> Naam:<input type="text" name="naam" value=""></label>
+							<label>E-mail:<input type="e-mail" name="e-mail" value=""></label>
+							<label>Reactie:<textarea></textarea></label>
+							<input class="button" type="submit" value="Submit">
+						</legend>
+					</fieldset>
+				</form>
+			</div>
+		<footer>Nandini Jaddoe&copy; 2017</footer>
+		<script src="./js/assets/less.js" type="text/javascript"></script>
+		<script src="./js/login.js" type="text/javascript"></script>
+		<script src="./js/dropDown.js" type="text/javascript"></script>
+	</body>
+</html>
