@@ -15,10 +15,14 @@
             color: @marine-blauw;
             text-align: left;
         }
-        p{
-            line-height: 1.618em;
-            min-width: 20em;
-            max-width: 40em;
+        .content {
+            height: 0;
+            overflow: hidden;
+            .transition(1s all ease);
+            p{
+                max-width: 40em;
+                display: inline-block;
+            }
         }
     }
 

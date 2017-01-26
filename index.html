@@ -9,6 +9,7 @@
 	</head>
 	<body>
 		<header>
+			<img src="./images/nslogo.svg" alt="Home">
 			<a href="./index.html"><H1>Trein verhalen</H1></a>
 			<a href="#" class="form-link">Mijn verhalen</a>
 			<!-- Een deel van de code van http://codepen.io/codemonkeyco/pen/grGobZ -->
@@ -69,181 +70,108 @@
 				<form>
 					<fieldset>
 						<legend>
-							<label> <input type="text" placeholder="Zoeken..."></label>
+							<input type="text" placeholder="Zoeken..."/>
 						</legend>
 					</fieldset>
 				</form>
 				<div class="btn-group">
-					<a id="filter-button" class="collapsed" role="button" data-toggle="collapse" data-parent="search-block" href="#collapseFilter" aria-expanded="false" aria-controls="collapseFilter">
-						<span class="icon-filter"></span>Filter
-					</a>
-					<a id="sorteer-button" class="collapsed" role="button" data-toggle="collapse" data-parent="search-block" href="#collapseSorteer" aria-expanded="false" aria-controls="collapseSorteer">
-						<span class="icon-filter"></span>Sorteer
-					</a>
+					<a id="filter-button" role="button" href="#">Filter</a>
+					<a id="sorteer-button" role="button" href="#">Sorteer</a>
 				</div>
 				<!--filteren-->
 				<div class="collapse filter">
 					<form class="form">
-						<div class="form-inline">
-							<legend>Leestijd
-								<div class="form-group">
-									<input type="checkbox" id="Option-One" />
-									<label class="green checkbox" for="Option-One">0 - 5 min</label>
-								</div>
-								<div class="form-group">
-									<input type="checkbox" id="Option-Two" />
-									<label class="green checkbox" for="Option-Two">5 - 10 min</label>
-								</div>
-								<div class="form-group">
-									<input type="checkbox" id="Option-Four" />
-									<label class="green checkbox" for="Option-Four">10 - 20 min</label>
-								</div>
-								<div class="form-group spacer"></div>
-								<div class="form-group">
-									<input type="checkbox" id="Option-Five" />
-									<label class="green checkbox" for="Option-Five">20+ min</label>
-								</div>
-								<legend>Genre
-									<div class="form-group">
-										<input type="checkbox" id="Option-One" />
-										<label class="green checkbox" for="Option-One">Avontuur</label>
-									</div>
-									<div class="form-group">
-										<input type="checkbox" id="Option-Two" />
-										<label class="green checkbox" for="Option-Two">Drama</label>
-									</div>
-									<div class="form-group">
-										<input type="checkbox" id="Option-Four" />
-										<label class="green checkbox" for="Option-Four">Horror</label>
-									</div>
-									<div class="form-group spacer"></div>
-									<div class="form-group">
-										<input type="checkbox" id="Option-Five" />
-										<label class="green checkbox" for="Option-Five">Liefde</label>
-									</div>
-								</legend>
-								<legend>Schrijfer
-									<div class="form-group">
-										<input type="checkbox" id="Option-One" />
-										<label class="green checkbox" for="Option-One">K. Hart</label>
-									</div>
-									<div class="form-group">
-										<input type="checkbox" id="Option-Two" />
-										<label class="green checkbox" for="Option-Two">A. Holleeder</label>
-									</div>
-									<div class="form-group">
-										<input type="checkbox" id="Option-Four" />
-										<label class="green checkbox" for="Option-Four">T. Geurts</label>
-									</div>
-									<div class="form-group spacer"></div>
-									<div class="form-group">
-										<input type="checkbox" id="Option-Five" />
-										<label class="green checkbox" for="Option-Five">Molovich</label>
-									</div>
-								</legend>
-								<legend>Taal
-									<div class="form-group">
-										<input type="checkbox" id="Option-One" />
-										<label class="green checkbox" for="Option-One">Nederlands</label>
-									</div>
-									<div class="form-group">
-										<input type="checkbox" id="Option-Two" />
-										<label class="green checkbox" for="Option-Two">Engels</label>
-									</div>
-									<div class="form-group">
-										<input type="checkbox" id="Option-Four" />
-										<label class="green checkbox" for="Option-Four">Frans</label>
-									</div>
-									<div class="form-group spacer"></div>
-									<div class="form-group">
-										<input type="checkbox" id="Option-Five" />
-										<label class="green checkbox" for="Option-Five">Duits</label>
-									</div>
-								</legend>
-							</div>
-						</form>
-					</div>
-					<!--sorteren-->
-					<div class="collapse sorteer">
-						<form class="form">
-							<div class="form-inline">
-								<legend>Sorteren op
-									<div class="form-group">
-										<input type="checkbox" id="Option-One" />
-										<label class="green checkbox" for="Option-One">Datum</label>
-									</div>
-									<div class="form-group">
-										<input type="checkbox" id="Option-Two" />
-										<label class="green checkbox" for="Option-Two">Alfabet</label>
-									</div>
-									<div class="form-group">
-										<input type="checkbox" id="Option-Four" />
-										<label class="green checkbox" for="Option-Four">Meest Gelezen</label>
-									</div>
-									<div class="form-group spacer"></div>
-									<div class="form-group">
-										<input type="checkbox" id="Option-Five" />
-										<label class="green checkbox" for="Option-Five">Hoogste waardering</label>
-									</div>
-								</legend>
-							</div>
-						</form>
-					</div>
+						<legend>Leestijd
+								<input type="checkbox" class="Option-One"> 0 - 5 min</input>
+								<input type="checkbox" class="Option-Two"> 5 - 10 min</input>
+								<input type="checkbox" class="Option-Four"> 10 - 20 min</input>
+								<input type="checkbox" class="Option-Five"> 20+ min</input>
+						</legend>
+						<legend>Genre
+								<input type="checkbox" class="Option-One"> Avontuur</input>
+								<input type="checkbox" class="Option-Two"> Drama</input>
+								<input type="checkbox" class="Option-Four"> Horror</input>
+								<input type="checkbox" class="Option-Five"> Liefde</input>
+						</legend>
+						<legend>Schrijfer
+								<input type="checkbox" class="Option-One">K. Hart</input>
+								<input type="checkbox" class="Option-Two">A. Holleeder</input>
+								<input type="checkbox" class="Option-Four">T. Geurts</input>
+								<input type="checkbox" class="Option-Five">Molovich</input>
+						</legend>
+						<legend>Taal
+								<input type="checkbox" class="Option-One">Nederlands</input>
+								<input type="checkbox" class="Option-Two">Engels</input>
+								<input type="checkbox" class="Option-Four">Frans</input>
+								<input type="checkbox" class="Option-Five">Duits</input>
+						</legend>
+					</form>
 				</div>
-				
-				<section>
-					<article class="block">
-						<img src="./images/woorden.jpg" alt="Woordenrally">
-						<div class="overlay">
-							<H2>Woordenrally</H2>
-							<p>Ik stap bus 21 uit. Mijn zoon slaapt in zijn wagentje, de paarse crayon die hij van thuis heeft meegenomen, stevig in zijn knuistje...</p>
-							<a href="woordenrally.html"><span class="arrow"></span>Lees meer</a>
-						</div>
-					</article>
-					<article class="block">
-						<img src="./images/amsterdam.png" alt="Toerischtische route">
-						<div class="overlay">
-							<H2>Toerischtische route</H2>
-							<p>Als u naar links kijkt, ziet u het Centraal Station. Gebouwd tussen 1881 en 1889 door architect P.H.J...</p>
-							<a href="route.html"><span class="arrow"></span>Lees meer</a>
-						</div>
-					</article>
-					<article class="block">
-						<img src="./images/frustratie.jpg" alt="Gefrustreerd">
-						<div class="overlay">
-							<h2>Gefrustreerd</h2>
-							<p>Ik stap uit die godverdomde stinkbus. De mensen krioelen als mieren over het stationsplein. Ik wil ze vertrappen onder...</p>
-							<a href="gefrustreerd.html"><span class="arrow"></span>Lees meer</a>
-						</div>
-					</article>
-					<article class="block">
-						<img src="./images/woorden.jpg" alt="Woordenrally">
-						<div class="overlay">
-							<H2>Woordenrally</H2>
-							<p>Ik stap bus 21 uit. Mijn zoon slaapt in zijn wagentje, de paarse crayon die hij van thuis heeft meegenomen, stevig in zijn knuistje...</p>
-							<a href="woordenrally.html"><span class="arrow"></span>Lees meer</a>
-						</div>
-					</article>
-					<article class="block">
-						<img src="./images/amsterdam.png" alt="Toerischtische route">
-						<div class="overlay">
-							<H2>Toerischtische route</H2>
-							<p>Als u naar links kijkt, ziet u het Centraal Station. Gebouwd tussen 1881 en 1889 door architect P.H.J...</p>
-							<a href="route.html"><span class="arrow"></span>Lees meer</a>
-						</div>
-					</article>
-					<article class="block">
-						<img src="./images/frustratie.jpg" alt="Gefrustreerd">
-						<div class="overlay">
-							<h2>Gefrustreerd</h2>
-							<p>Ik stap uit die godverdomde stinkbus. De mensen krioelen als mieren over het stationsplein. Ik wil ze vertrappen onder...</p>
-							<a href="gefrustreerd.html"><span class="arrow"></span>Lees meer</a>
-						</div>
-					</article>
-				</section>
-			</div>
+				<!--sorteren-->
+				<div class="collapse sorteer">
+					<form class="form">
+						<legend>Sorteren op
+								<input type="checkbox" class="Option-One">Datum</input>
+								<input type="checkbox" class="Option-Two">Alfabet</input>
+								<input type="checkbox" class="Option-Four">Meest Gelezen</input>
+								<input type="checkbox" class="Option-Five">Hoogste waardering</input>
+						</legend>
+					</form>
+				</div>
+			</div>	
+			<section>
+				<article class="block">
+					<img src="./images/woorden.jpg" alt="Woordenrally">
+					<div class="overlay">
+						<H2>Woordenrally</H2>
+						<p>Ik stap bus 21 uit. Mijn zoon slaapt in zijn wagentje, de paarse...</p>
+						<a href="woordenrally.html"><span class="arrow"></span>Lees meer</a>
+					</div>
+				</article>
+				<article class="block">
+					<img src="./images/amsterdam.png" alt="Toerischtische route">
+					<div class="overlay">
+						<H2>Toerischtische route</H2>
+						<p>Als u naar links kijkt, ziet u het Centraal Station. Gebouwd...</p>
+						<a href="route.html"><span class="arrow"></span>Lees meer</a>
+					</div>
+				</article>
+				<article class="block">
+					<img src="./images/frustratie.jpg" alt="Gefrustreerd">
+					<div class="overlay">
+						<h2>Gefrustreerd</h2>
+						<p>Ik stap uit die godverdomde stinkbus. De mensen krioelen...</p>
+						<a href="gefrustreerd.html"><span class="arrow"></span>Lees meer</a>
+					</div>
+				</article>
+				<article class="block">
+					<img src="./images/woorden.jpg" alt="Woordenrally">
+					<div class="overlay">
+						<H2>Woordenrally</H2>
+						<p>Ik stap bus 21 uit. Mijn zoon slaapt in zijn wagentje, de paarse...</p>
+						<a href="woordenrally.html"><span class="arrow"></span>Lees meer</a>
+					</div>
+				</article>
+				<article class="block">
+					<img src="./images/amsterdam.png" alt="Toerischtische route">
+					<div class="overlay">
+						<H2>Toerischtische route</H2>
+						<p>Als u naar links kijkt, ziet u het Centraal Station. Gebouwd...</p>
+						<a href="route.html"><span class="arrow"></span>Lees meer</a>
+					</div>
+				</article>
+				<article class="block">
+					<img src="./images/frustratie.jpg" alt="Gefrustreerd">
+					<div class="overlay">
+						<h2>Gefrustreerd</h2>
+						<p>Ik stap uit die godverdomde stinkbus. De mensen krioelen...</p>
+						<a href="gefrustreerd.html"><span class="arrow"></span>Lees meer</a>
+					</div>
+				</article>
+			</section>
 		</main>
 		<footer><p>Nandini Jaddoe&copy; 2017</p></footer>
+		<script src="./js/functions.js" type="text/javascript"></script>
 		<script src="./js/filterSorteer.js" type="text/javascript"></script>
 		<script src="./js/login.js" type="text/javascript"></script>
 		<script src="./js/front.js" type="text/javascript"></script>

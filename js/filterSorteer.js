@@ -1,39 +1,27 @@
 (function() {
-	var $filterButton = $('#filter-button');
-	var $filterCollapse = $('.collapse.filter');
+	var filterButton = document.getElementById('filter-button');
+	var filterCollapse = document.getElementsByClassName('collapse filter')[0];
 
-	var $sorteerButton = $('#sorteer-button');
-	var $sorteerCollapse = $('.collapse.sorteer');
+	var sorteerButton = document.getElementById('sorteer-button')
+	var sorteerCollapse = document.getElementsByClassName('collapse sorteer')[0];
 
-	$filterButton.on('click', collapse);
-	$sorteerButton.on('click', collapse);
+	filterButton.addEventListener("click", function() {
+		collapse(filterCollapse);
+	});
 
-	function collapse() {
-		var $filterFormHeight = $filterCollapse.children('form').css('height');
+	sorteerButton.addEventListener("click", function() {
+		collapse(sorteerCollapse);
+	});
 
-		$(this).toggleClass('active');
+	function collapse(filter) {
+		var filterFormHeight = outerHeight(filter.children[0]);
+    	var filterHeight = outerHeight(filter);
 
-		if ($(this).is($filterButton)) {
-			if ($(this).hasClass('active')) {
-				$filterCollapse.css({
-					'height': $filterFormHeight,
-				});
-			} else {
-				$filterCollapse.css({
-					'height': 0,
-				});
-			}
-		} else if ($(this).is($sorteerButton)) {
-			if ($(this).hasClass('active')) {
-				$sorteerCollapse.css({
-					'height': $filterFormHeight,
-				});
-			} else {
-				$sorteerCollapse.css({
-					'height': 0,
-				});
-			}
-		}
+    	if (filterFormHeight === filterHeight) {
+    		filter.style.height = "0px";
+    	} else {
+    		filter.style.height = filterFormHeight + "px";
+    	}		
 	}
 
 })();
