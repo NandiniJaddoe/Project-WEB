@@ -23,7 +23,7 @@ function registerForm() {
 	$('.ms-content').addClass('turn-register');
 	$('.field').parent().removeClass('required');
 }
-function signINForm() {
+function loginForm() {
 	$('.ms-content').removeClass('turn-register');
 	$('.field').parent().removeClass('required');
 }
