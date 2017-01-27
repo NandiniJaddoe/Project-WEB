@@ -1,8 +1,8 @@
 (function () {
-    var toggleElement = document.getElementsByClassName("toggle");
+    var toggleElement = document.getElementsByClassName('toggle');
 
 	for (var i = 0; i < toggleElement.length; i++) {
-		toggleElement[i].addEventListener("click", toggle);
+		toggleElement[i].addEventListener('click', toggle);
 	}
 
 
@@ -16,9 +16,9 @@
     	}
 
     	if (outerHeight(content) === contentHeight) {
-    		content.style.height = "0px";
+    		content.style.height = '0px';
     	} else {
-    		content.style.height = contentHeight + "px";
+    		content.style.height = contentHeight + 'px';
     	}
 
     }

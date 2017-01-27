@@ -2,8 +2,8 @@
 
 	// Variabelen voor de carousel
 	var carousel = {}; // Maakt een leeg object
-	var $links = $('.header-img a'); // Maakt een variabele van alle links
-	var $headerImg = $('.header-img img'); // Maakt een variabele van alle opgegeven images
+	var links = document.getElementsByClassName('header-img a'); // Maakt een variabele van alle links
+	var headerImg = document.getElementsByClassName('header-img img'); // Maakt een variabele van alle opgegeven images
 
 	// Zegt wat bij welke varibele hoort 
 	carousel.links = $links; // Voegt object toe met data van het links var

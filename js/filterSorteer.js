@@ -5,11 +5,11 @@
 	var sorteerButton = document.getElementById('sorteer-button')
 	var sorteerCollapse = document.getElementsByClassName('collapse sorteer')[0];
 
-	filterButton.addEventListener("click", function() {
+	filterButton.addEventListener('click', function() {
 		collapse(filterCollapse);
 	});
 
-	sorteerButton.addEventListener("click", function() {
+	sorteerButton.addEventListener('click', function() {
 		collapse(sorteerCollapse);
 	});
 
@@ -18,9 +18,9 @@
     	var filterHeight = outerHeight(filter);
 
     	if (filterFormHeight === filterHeight) {
-    		filter.style.height = "0px";
+    		filter.style.height = '0px';
     	} else {
-    		filter.style.height = filterFormHeight + "px";
+    		filter.style.height = filterFormHeight + 'px';
     	}		
 	}
 
