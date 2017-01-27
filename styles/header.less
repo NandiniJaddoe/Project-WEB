@@ -22,185 +22,62 @@ header{
             max-height: 2em;
         }
     }
-    .form {
+    form {
         position: absolute;
         top: 100%;
         right: 0;
         font-family: 'ns_sans', sans-serif;
         z-index: 11;
         background: @geel;
-        height: 0;
-        overflow: hidden;
-        padding: 0 1em;
-        .transition(height 1s ease);
-        &.active {
-            padding: 1em;
-            height: 31em;
-        }
+        max-width: 20em;
         * {
             box-sizing: border-box;
         }
-        > .ms-content, > .ms-register.reg {
-            background-color: @geel;
-            .transition(all 1s ease);
-        }
-        > .ms-content {
-            z-index: 2;
-            height: 500px;
-        }
-        > .ms-content.turn-register, > .ms-register.reg {
-            height: 0px;
+        .login-wrapper, .register-wrapper {
+            height: 0;
             overflow: hidden;
-            z-index: 1;
+            .transition(height 1s ease);
         }
-        > .ms-content.turn-register ~ .ms-register.reg {
-            height: 500px;
-            z-index: 2;
+        .login, .register {
+            padding: 1em;
         }
-
-        .ms-content h2,
-        .ms-register h2 {
+        h2 {
+            text-transform: uppercase;
             border-bottom: 0.1em solid @marine-blauw;
-            padding-bottom: 0.5em;
-            margin-bottom: 0.5em;
             color: @marine-blauw;
         }
-        .ms-field {
+        .form-field {
             position: relative;
-            padding: 5px 0;
-            .ms-field:before {
-                content: 'required';
-                position: absolute;
-                right: 7px;
-                top: 0;
-                color: #FF0000;
-                opacity: 0;
-                transition: opacity .5s ease;
+            input {
+                box-shadow: none;
+                border: none;
+                width: 100%;
+                font-size: 1em;
+                margin: 1em auto;
+                padding: 1em;
+                outline: none;
             }
-            .ms-field.required:before {
-                content: 'required';
-                opacity: 1;
+            .placeholder {
+                color: @marine-blauw;
             }
         }
-
-        
-        .ms-field:after,
-        .ms-field.required:after {
-            content: '';
-            border-color: #FF0000 !important;
-        }
-        .field {
-            width: 100%;
-            padding: 1em;
-            font-size: 1em;
-            border: 0.1em solid #FFFFFF;
-            margin: 1em auto;
-            outline: none !important;
-        }
-        .placeholder {
-            position: absolute;
-            top: 36px;
-            left: 16px;
-            transition: all .5s ease;
-        }
-        .field:focus ~ .placeholder,
-        .placeholder.filled {
-            top: 0;
-            left: 0;
-        }
-        .ms-line,
-        .ms-line.filled {
-            border-color: #0067FF !important;
-        }
-        .ms-line,
-        .ms-field:after {
-            position: absolute;
-            bottom: 1em;
-            left: 0;
-            right: 0;
-            border-bottom: 0.15em solid;
-            border-right: 0px solid transparent;
-            border-top: 0px solid transparent;
-            border-left: 0px solid transparent;
-            border-radius: 0%;
-            width: 0;
-            transition: border-color .15s ease .4s, width .15s ease, border-right .15s ease .2s, border-bottom-right-radius .15s ease .27s, border-top .15s ease .15s, border-left .15s ease, border-bottom-left-radius .15s ease, right .15s ease, bottom .15s ease;
-        }
-        .field:focus ~ .ms-line {
-            width: 100%;
-            transition: width .5s ease;
-            border-radius: 0;
-        }
-        .field:focus ~ .ms-line.filled {
-            width: 35px;
-            transition: width .5s ease;
-            border-radius: 100%;
-        }
-        .ms-line.filled,
-        .ms-field.required:after {
-            left: inherit;
-            bottom: 28px;
-            right: 15px;
-            width: 35px;
-            height: 35px;
-            border-right: 2px solid;
-            border-top: 2px solid;
-            border-left: 2px solid;
-            border-bottom-right-radius: 100%;
-            border-top-right-radius: 100%;
-            border-top-left-radius: 100%;
-            border-bottom-left-radius: 100%;
-            transition: transform .15s ease, width .15s ease .15s, border-right .15s ease .2s, border-bottom-right-radius .15s ease .1s, border-top .15s ease .25s, border-left .15s ease .3s, border-bottom-left-radius .15s ease .3s, right .15s ease .2s, bottom .15s ease .2s;
-        }
-        .ms-line i {
-            opacity: 0;
-            transition: all 0s ease;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            margin: auto;
-            text-align: center;
-            height: 22px;
-            font-size: 24px;
-            color: #333;
-        }
-        .ms-line.filled i {
-            opacity: 1;
-            transition: all .15s ease .5s;
-        }
-
-        .ms-form-btn {
+        button {
             width: 100%;
             background: none;
-            border: 0.15em solid @blauw;
+            border: 0.155555em solid @blauw;
             color: @wit;
             font-size: 1em;
             padding: 1em;
             margin: 1em 0;
-            transition: all .5s ease;
-            outline: none !important;
-        }
-            .ms-form-btn:hover,
-            .ms-form-btn:focus {
-                background: #0067FF;
-                border: 2px solid #0067FF;
-                color: #FFFFFF;
+            .transition(0.5s all ease);
+            outline: none;
+            &:focus, &:hover {
+                color: @wit;
+                background-color: @blauw;
             }
-
-        .ms-content p,
-        .ms-register p {
-            padding: 15px 0px;
-            text-align: center;
         }
-        .ms-content p a,
-        .ms-register p a {
-            color: #0067FF;
-            text-decoration: none;
-        }
-        .ms-content p a:hover,
-        .ms-register p a:hover {
+        p a {
+            color: @blauw;
             cursor: pointer;
         }
     }
