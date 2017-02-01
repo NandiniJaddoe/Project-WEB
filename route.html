@@ -10,49 +10,43 @@
 	<body class="content-page">
 		<header>
 			<a href="./index.html"><H1>Trein verhalen</H1></a>
-			<a href="#" class="form-link">Mijn verhalen</a>
-			<!-- Een deel van de code van http://codepen.io/codemonkeyco/pen/grGobZ -->
-			<div class="form" id="ms-form">
-				<div class="ms-content">
-					<div class="col-xs-12">
-						<h2><i class="fa fa-pencil"></i> INLOGGEN</h2>
-						<div class="ms-field">
-							<input type="text" class="field" />
-							<label class="placeholder">Gebruikersnaam</label>
-							<div class="ms-line"><i class="fa fa-check"></i></div>
-						</div>
-						<div class="ms-field">
-							<input type="password" class="field" />
-							<label class="placeholder">Wachtwoord</label>
-							<div class="ms-line"><i class="fa fa-check"></i></div>
-						</div>
-						<button type="button" class="ms-form-btn" onclick="signIn(); return true">LOGIN</button>
-						<p>Heeft u geen account? <a onclick="registerForm(); return true">Registreer</a></p>
-					</div>
-				</div>
-				<div class="ms-register reg">
-					<div class="col-xs-12">
-						<h2><i class="fa fa-pencil"></i> Registreer</h2>
-						<div class="ms-field">
-							<input type="text" class="field" />
-							<label class="placeholder">Gebruikersnaam</label>
-							<div class="ms-line"><i class="fa fa-check"></i></div>
-						</div>
-						<div class="ms-field">
-							<input type="password" class="field password" />
-							<label class="placeholder">Wachtwoord</label>
-							<div class="ms-line"><i class="fa fa-check"></i></div>
-						</div>
-						<div class="ms-field">
-							<input type="password" class="field cpassword" />
-							<label class="placeholder">Herhaal wachtwoord</label>
-							<div class="ms-line"><i class="fa fa-check"></i></div>
-						</div>
-						<button type="button" class="ms-form-btn" onclick="registerIn(); return false">REGISTREER</button>
-						<p>Heeft u a een account? <a onclick="signINForm(); return false">Sign In</a></p>
-					</div>
-				</div>
-			</div>
+			<a href="#" id="form-link">Mijn verhalen</a>
+			<form>
+                <div class="login-wrapper">
+                    <div class="login">
+                        <h2>Inloggen</h2>
+                        <div class="form-field">
+                            <label class="placeholder">Gebruikersnaam</label>
+                            <input type="text"/>
+                        </div>
+                        <div class="form-field">
+                            <label class="placeholder">Wachtwoord</label>
+                            <input type="password"/>
+                        </div>
+                        <button onclick="signIn(); return true">LOGIN</button>
+                        <p>Heeft u geen account? <a onclick="registerForm()">Registreer</a></p>
+                    </div>
+                </div>
+                <div class="register-wrapper">
+                    <div class="register">
+                        <h2>Registreer</h2>
+                        <div class="form-field">
+                            <label class="placeholder">Gebruikersnaam</label>
+                            <input type="text"/>
+                        </div>
+                        <div class="form-field">
+                            <label class="placeholder">Wachtwoord</label>
+                            <input type="password"/>
+                        </div>
+                        <div class="form-field">
+                            <label class="placeholder">Herhaal wachtwoord</label>
+                            <input type="password"/>
+                        </div>
+                        <button onclick="signIn(); return true">LOGIN</button>
+                        <p>Heeft u geen account? <a onclick="loginForm(); return true">Registreer</a></p>
+                    </div>
+                </div>
+            </form>
 		</header>
 		<section>
 			<!-- Een deel van de code van http://jsfiddle.net/ParthAkbari/pnhLyjb6/3/ -->
