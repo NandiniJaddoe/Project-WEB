@@ -1,6 +1,6 @@
 (function () {
 
-    var toggleElement = document.getElementsByClassName('toggle');
+    var toggleElement = document.querySelectorAll('.toggle');
 
     toggleElement.forEach(function(obj) {
         obj.addEventListener('click', toggle);

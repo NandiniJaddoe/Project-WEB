@@ -1,4 +1,4 @@
-header{
+ header{
     background-color: @wit;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     height: 2em;
@@ -100,18 +100,18 @@ header{
         width: 100%;
         display: flex;
         justify-content: space-around;
-        color: @geel;
+        color: rgba(255,255,255,0.7);
         a {
             width: 30%;
             cursor: pointer;
-            border-bottom: 2px solid @geel;
-            &:active {
+            border-bottom: 2px solid rgba(255,255,255,0.7);
+            &.active {
                 color: @wit;
                 border-bottom: 2px solid @wit;
             }
             &:hover {
-                border-bottom: 2px solid @blauw;
-                color: @blauw;
+                border-bottom: 2px solid @wit;
+                color: @wit;
             }
         }
     }

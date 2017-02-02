@@ -19,7 +19,7 @@ var myMapKey = "AIzaSyA5_vDDyGxubMqytTj06bNbSwjzDvGBBBw";
 // Vervang vervolgens hieronder 'marker.svg' door de naam van jouw plaatje
 
 // Nb. Als je geen eigen marker wilt, kun je de hele onderstaande regel deleten.
-var myMapImage = '1.svg';
+var myMapImage = 'maps.svg';
 
 
 
