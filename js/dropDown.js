@@ -1,10 +1,10 @@
 (function () {
+
     var toggleElement = document.getElementsByClassName('toggle');
 
-	for (var i = 0; i < toggleElement.length; i++) {
-		toggleElement[i].addEventListener('click', toggle);
-	}
-
+    toggleElement.forEach(function(obj) {
+        obj.addEventListener('click', toggle);
+    });
 
     function toggle() {
     	var content = this.nextSibling.nextSibling;
@@ -20,7 +20,6 @@
     	} else {
     		content.style.height = contentHeight + 'px';
     	}
-
     }
 
 })();

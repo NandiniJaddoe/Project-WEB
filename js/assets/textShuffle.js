@@ -1,7 +1,8 @@
 // Een deel van de code van http://codepen.io/SaschaSigl/pen/woGYKJ
-function WordShuffler(holder, opt){
+function WordShuffler(holder){
   var that = this;
   var time = 0;
+
   this.now;
   this.then = Date.now();
   
@@ -16,10 +17,10 @@ function WordShuffler(holder, opt){
 /* Snelheid, kleur en soort lettertype dat wordt gemixt*/
   var options = {
     fps : 1000000,
-    textColor : '#ffffff',
+    textColor : '#000',
     fontSize : "1em",
     mixCapital : true,
-    needUpdate : true,
+    timeOffset: 1,
     colors : [
       '#ff0000','#00ff00','#080808',
       '#ffff00','#00ffff','#f0f0f0',
@@ -29,12 +30,6 @@ function WordShuffler(holder, opt){
       '#ff5722','#795548','#9e9e9e',
       '#607d8b'
     ]
-  }
-
-  if(typeof opt != "undefined"){
-    for(key in opt){
-      options[key] = opt[key];
-    }
   }
 
   this.needUpdate = true;
@@ -96,13 +91,10 @@ function WordShuffler(holder, opt){
     return span;
   }
 
-
   this.updateCharacter = function (time) {
     
       this.now = Date.now();
       this.delta = this.now - this.then;
-
-       
 
       if (this.delta > this.interval) {
         this.currentTimeOffset++;
@@ -139,9 +131,8 @@ function WordShuffler(holder, opt){
       }
   }
 
-/* makes the magic happen*/
+  /* makes the magic happen*/
   function update(time) {
-    time++;
     if(that.needUpdate){
       that.updateCharacter(time);
     }
@@ -151,4 +142,5 @@ function WordShuffler(holder, opt){
   this.writeWord(this.holder.innerHTML);
 
   update(time);
+
 }

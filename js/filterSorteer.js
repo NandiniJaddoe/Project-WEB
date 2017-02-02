@@ -1,4 +1,5 @@
 (function() {
+	
 	var filterButton = document.getElementById('filter-button');
 	var filterCollapse = document.getElementsByClassName('collapse filter')[0];
 

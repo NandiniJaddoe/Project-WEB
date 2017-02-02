@@ -1,4 +1,5 @@
 (function() {
+	
 	var carousel = {}; // Maakt een leeg object
 	var links = document.querySelectorAll('.header-img a'); // Maakt een variabele van alle links
 	var headerImg = document.querySelectorAll('.header-img img'); // Maakt een variabele van alle opgegeven images
